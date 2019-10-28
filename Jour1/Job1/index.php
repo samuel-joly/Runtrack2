@@ -4,8 +4,9 @@ $str='Hello LaPlateforme';
 echo $str;
 $str2 = 'Vive ';
 $str3 = ' !';
+
 // Je sais pas comment faire autrement
-echo $str2.substr($str,5).$str3;
+echo $str2.'la plateforme'.$str3;
 
 $val = 6;
 echo $val;
