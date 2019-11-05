@@ -50,6 +50,6 @@
 	}
 	
 	
-	echo leetspeak("Je parle en leet tous les jours Gare a vous !");
+	echo leetspeak("JE PARLE EN LEET TOUS LES JOURS GARE A VOUS !");
 
 ?>
