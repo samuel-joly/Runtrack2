@@ -1,7 +1,7 @@
 <?php
 	
 	session_start();
-	if(!$_SESSION["nameList"])
+	if(!isset($_SESSION["nameList"]))
 	{
 		$_SESSION["nameList"] = array();
 	}
@@ -16,12 +16,22 @@
 		
 	}
 	
-	$i = 0;
-	while($i < count($_SESSION["nameList"]))
+	if(isset($_GET["resetBtn"]))
 	{
-		echo $_SESSION["nameList"][$i]."<br/>";
-		
-		$i ++;
+		session_destroy();
+		header("location:index.php");
+	}
+	
+	
+	if ( count($_SESSION["nameList"]) > 0 )
+	{
+		$i = 0;
+		while($i < count($_SESSION["nameList"]))
+		{
+			echo $_SESSION["nameList"][$i]."<br/>";
+			
+			$i ++;
+		}		
 	}
 
 
@@ -33,5 +43,6 @@
 
 	<input type="text" name="name"/>
 	<input type="submit" name="submitBtn"/>
+	<input type="submit" value="reset" name="resetBtn"/>
 
 </form>
