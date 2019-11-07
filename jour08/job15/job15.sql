@@ -1,0 +1,1 @@
+SELECT etages.nom, salles.nom FROM salles INNER JOIN etages ON salles.id_etage = etages.numero+1;
