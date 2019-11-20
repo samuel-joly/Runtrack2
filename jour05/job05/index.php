@@ -1,29 +1,21 @@
 <?php
 
-	function calcule($number1, $operator, $number2)
+	function occurence($str, $char)
 	{
-		if($operator=="*")
+		$count = 0;
+		$charCount = 0;
+		while($count < strlen($str))
 		{
-			return $number1 * $number2;
+			if ($str[$count] == $char)
+			{
+				$charCount ++;
+			}
+			$count ++;
 		}
-		else if ($operator == "/")
-		{
-			return $number1 / $number2;
-		}
-		else if ($operator == "-")
-		{
-			return $number1 - $number2;
-		}
-		else if ($operator == "+")
-		{
-			return $number1 + $number2;
-		}
-		else
-		{
-			echo "Valeure non acceptée";
-		}
+		
+		return $charCount;
 	}
 	
-	echo calcule(1,"-",1);
+	echo occurence("phraseee test", "e");
 
 ?>
